@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SWMNU.Net.FlashMessage.Src</name>
+    </assembly>
+    <members>
+        <member name="T:SWMNU.Net.FlashMessage.ExtensionMethods">
+            <summary>
+            Extension Methods class for extending built-in methods.
+            </summary>
+        </member>
+        <member name="M:SWMNU.Net.FlashMessage.ExtensionMethods.SetFlashMessage(Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionary,SWMNU.Net.FlashMessage.AlertMessage)">
+            <summary>
+            Sets Flash Message params in TempData.
+            </summary>
+            <param name="tempData">Current TempData object for Controller or Page.</param>
+            <param name="alertMessage">Flash Message to set in <paramref name="tempData"/></param>
+        </member>
+        <member name="T:SWMNU.Net.FlashMessage.AlertType">
+            <summary>
+            Enumeration of valid Bootstrap alert theme colors.
+            </summary>
+        </member>
+        <member name="F:SWMNU.Net.FlashMessage.AlertType.Primary">
+            <summary>
+            Creates an alert with the Bootstrap 'Primary' theme color.
+            </summary>
+        </member>
+        <member name="F:SWMNU.Net.FlashMessage.AlertType.Secondary">
+            <summary>
+            Creates an alert with the Bootstrap 'Secondary' theme color.
+            </summary>
+        </member>
+        <member name="F:SWMNU.Net.FlashMessage.AlertType.Success">
+            <summary>
+            Creates an alert with the Bootstrap 'Success' theme color.
+            </summary>
+        </member>
+        <member name="F:SWMNU.Net.FlashMessage.AlertType.Danger">
+            <summary>
+            Creates an alert with the Bootstrap 'Danger' theme color.
+            </summary>
+        </member>
+        <member name="F:SWMNU.Net.FlashMessage.AlertType.Warning">
+            <summary>
+            Creates an alert with the Bootstrap 'Warning' theme color.
+            </summary>
+        </member>
+        <member name="F:SWMNU.Net.FlashMessage.AlertType.Info">
+            <summary>
+            Creates an alert with the Bootstrap 'Info' theme color.
+            </summary>
+        </member>
+        <member name="F:SWMNU.Net.FlashMessage.AlertType.Light">
+            <summary>
+            Creates an alert with the Bootstrap 'Light' theme color.
+            </summary>
+        </member>
+        <member name="F:SWMNU.Net.FlashMessage.AlertType.Dark">
+            <summary>
+            Creates an alert with the Bootstrap 'Dark' theme color.
+            </summary>
+        </member>
+        <member name="T:SWMNU.Net.FlashMessage.AlertMessage">
+            <summary>
+            POCO Class for defining an flash message as a Bootstrap alert.
+            </summary>
+        </member>
+        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Text">
+            <summary>
+            The meat of the message.
+            </summary>
+        </member>
+        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Title">
+            <summary>
+            An optional title. Will get a `&lt;h4&gt;` tag with the class `alert-heading`.
+            </summary>
+        </member>
+        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Type">
+            <summary>
+            The type of Alert to display. Defined in <see cref="T:SWMNU.Net.FlashMessage.AlertType"/>.
+            </summary>
+        </member>
+        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Dismissible">
+            <summary>
+            <para>
+            Boolean determining if the generated alert should be dismissible.
+            </para>
+            <para>
+            True: An X appears in the upper right of the alert.
+            </para>
+            <para>
+            False: No X appears.
+            </para>
+            </summary>
+        </member>
+    </members>
+</doc>

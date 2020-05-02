@@ -18,6 +18,7 @@
     <RepositoryUrl>https://github.com/saiwolf/FlashMessage</RepositoryUrl>
     <PackageVersion>1.0.1-alpha</PackageVersion>
     <Version>1.0.1</Version>
+    <PackageTags>flash message alert bootstrap asp.net core webapp</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup>

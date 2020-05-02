@@ -3,6 +3,14 @@
 ## Description
 This is a Razor Class Library I wrote that provides a means to display Flash Messages in an ASP.NET Core 3.1 web application. (Razor Pages and MVC are supported.)
 
+It depends on and utilizes [Twitter Bootstrap 4](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for the alert CSS and HTML.
+
+## What's a Flash Message?
+A Flash Message can be thought of as a one time notification.
+
+Perhaps a Welcome message after you sign up for a web site. Or an error notification indicating
+that an action has failed. They're meant to be seen once and never again.
+
 ## Getting Started
 
 Install the NuGet Package
@@ -109,7 +117,8 @@ public enum AlertType
 ## How it works
 
 In a nutshell, this library exports functions and a Razor View Partial that work in tandem
-to display a Flash Message using [`TempData`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-3.1#tempdata).
+to display a Flash Message using [`TempData`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-3.1#tempdata) and 
+Bootstrap 4 for the Alert styling.
 
 By using `TempData`, the flash message is only shown
 once. A refresh or reload will cause the message to disappear.

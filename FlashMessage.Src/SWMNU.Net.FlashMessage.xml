@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>SWMNU.Net.FlashMessage.Src</name>
+        <name>SWMNU.Net.FlashMessage</name>
     </assembly>
     <members>
         <member name="T:SWMNU.Net.FlashMessage.ExtensionMethods">

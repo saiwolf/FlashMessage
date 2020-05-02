@@ -1,7 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <AssemblyName>SWMNU.Net.FlashMessage</AssemblyName>
     <RootNamespace>SWMNU.Net.FlashMessage</RootNamespace>
@@ -15,11 +16,12 @@
     <PackageProjectUrl>https://github.com/saiwolf/FlashMessage</PackageProjectUrl>
     <RepositoryType>github</RepositoryType>
     <RepositoryUrl>https://github.com/saiwolf/FlashMessage</RepositoryUrl>
-    <PackageVersion>1.0.0-alpha</PackageVersion>
+    <PackageVersion>1.0.1-alpha</PackageVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>SWMNU.Net.FlashMessage.Src.xml</DocumentationFile>
+  <PropertyGroup>
+    <DocumentationFile>SWMNU.Net.FlashMessage.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>

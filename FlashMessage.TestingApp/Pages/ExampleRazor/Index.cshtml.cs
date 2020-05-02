@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SWMNU.Net.FlashMessage;
 
-namespace SWMNU.Net.FlashMessage.TestingApp.Pages.ExampleRazor
+namespace SWMNU.Net.TestingApp.Pages.ExampleRazor
 {
     public class IndexModel : PageModel
     {

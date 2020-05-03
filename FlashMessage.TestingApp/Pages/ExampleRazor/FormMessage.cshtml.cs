@@ -5,22 +5,45 @@ using SWMNU.Net.TestingApp.Models;
 
 namespace SWMNU.Net.TestingApp.Pages.ExampleRazor
 {
-
-
     public class FormMessageModel : PageModel
     {
+        // Public Property FormAlert for use in OnPost() method.
         public FormAlert FormAlert { get; set; }
 
+        // Bound Public Property used to hold Form values on form submission.
         [BindProperty]
         public FormMessageViewModel FMVM { get; set; }
 
+        /// <summary>
+        /// <para>HTTP Method: GET</para>
+        /// <para>Stub method to return Razor Page.</para>
+        /// </summary>
         public void OnGet()
         {
         }
 
+        /// <summary>
+        /// <para>HTTP Method: POST</para>
+        /// <para>Method that runs on form submission in file: Pages/ExampleRazor/FormMessage.chstml</para>
+        /// </summary>
         public IActionResult OnPost()
         {
-            if(FMVM.FirstName.Length < 2)
+            //
+            // A Note:
+            //
+            // If you take a peek in Models/FormMessageViewModel.cs, you'll notice that Data
+            // Attributes are put on `FirstName` and `LastName`. This is for when you submit
+            // the form without any values whatsoever; which shows off ASP.NET Core's Form 
+            // Validation, which ties in with jQuery Validate and jQuery Validation Unobtrusive.
+            //
+            // We could have used Data Attribute Validation in Models/FormMessageViewModel.cs
+            // to check for string length on our form properties; but that would invalidate ModelState
+            // without actually calling this method.
+            //
+            // So we check our form values here, so we can explicity invalidate ModelState should
+            // the values not conform to our rules.
+            //
+            if (FMVM.FirstName.Length < 2)
             {
                 ModelState.AddModelError("", "First Name must be longer than 2 characters.");
             }
@@ -30,12 +53,20 @@ namespace SWMNU.Net.TestingApp.Pages.ExampleRazor
                 ModelState.AddModelError("", "Last Name must be longer than 2 characters.");
             }
 
-            if(!ModelState.IsValid)
+            // If the submitted values didn't pass our rules above,
+            // then we build our error alert.
+            if (!ModelState.IsValid)
             {
+                // This calls a custom extension method, which extends `ModelStateDictionary`.
+                // It gathers all validation errors and returns them in an `List<string>`.
                 var errorsList = ModelState.GetModelStateErrors();
 
+                // This calls a custom helper method which takes a List<string> and returns
+                // a string containing an HTML <ul></ul> element with child <li></li> elements
+                // containing Validation Errors.
                 var errors = MessageHelpers.BuildFormErrorString(errorsList);
 
+                // Build our Error Alert
                 FormAlert = new FormAlert()
                 {
                     Title = "Uh oh!",
@@ -45,6 +76,7 @@ namespace SWMNU.Net.TestingApp.Pages.ExampleRazor
                     Errors = errors
                 };                
             }
+            // Nothing went wrong, so we make a success alert.
             else
             {
                 FormAlert = new FormAlert()
@@ -57,7 +89,9 @@ namespace SWMNU.Net.TestingApp.Pages.ExampleRazor
                 };
             }
 
+            // Set Form Message params to show on form submission.
             TempData.SetFormMessage(FormAlert);
+            // Return Page.
             return Page();
         }
     }

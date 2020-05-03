@@ -7,7 +7,7 @@ namespace SWMNU.Net.FlashMessage
     public class FormAlert : AlertMessage
     {
         /// <summary>
-        /// string of Errors.
+        /// String of Errors.
         /// </summary>
         public string Errors { get; set; }
     }

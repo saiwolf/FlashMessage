@@ -14,7 +14,7 @@
         /// </summary>
         public string Title { get; set; }
         /// <summary>
-        /// The type of Alert to display. Defined in <see cref="AlertTypes"/>.
+        /// The type of Alert to display. Defined in <see cref="AlertType"/>.
         /// </summary>
         public AlertType Type { get; set; }
         /// <summary>

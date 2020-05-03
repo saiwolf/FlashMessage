@@ -1,0 +1,37 @@
+﻿@model SWMNU.Net.TestingApp.Models.FormMessageViewModel
+@{
+    ViewData["Title"] = "Form Error Message Example";
+}
+
+<h2 class="text-center font-weight-bold">@ViewData["Title"]</h2>
+<hr />
+<partial name="_FormMessage" />
+<form method="post" asp-action="FormMessage" asp-controller="ExampleMVC">
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label asp-for="@Model.FirstName"></label>
+        <input asp-for="@Model.FirstName" class="form-control" />
+        <span asp-validation-for="@Model.FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.LastName"></label>
+        <input asp-for="@Model.LastName" class="form-control" />
+        <span asp-validation-for="@Model.LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
+        <button type="button" class="btn btn-danger" id="reloadBtn">Reload Page</button>
+    </div>
+</form>
+
+@section Scripts
+{
+    <partial name="~/Pages/Shared/_ValidationScriptsPartial.cshtml" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#reloadBtn").on('click', function () {
+                window.location.href = window.location.href;
+            });
+        });
+    </script>
+}

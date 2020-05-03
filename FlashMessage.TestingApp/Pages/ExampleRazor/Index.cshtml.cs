@@ -1,29 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using SWMNU.Net.FlashMessage;
 
-namespace SWMNU.Net.TestingApp.Pages.ExampleRazor
+namespace SWMNU.NET.TestingApp.Pages.ExampleRazor
 {
     public class IndexModel : PageModel
     {
-        [BindProperty]
-        public AlertMessage FlashMessage { get; set; }
-
         public void OnGet()
         {
-            FlashMessage = new AlertMessage();
-        }
-
-        public IActionResult OnPost()
-        {
-            if (string.IsNullOrEmpty(FlashMessage.Text) || string.IsNullOrWhiteSpace(FlashMessage.Text))
-            {
-                ModelState.AddModelError("", "Flash Message needs some content!");
-                return Page();
-            }
-
-            TempData.SetFlashMessage(FlashMessage);
-            return RedirectToPage("/Index");
         }
     }
 }

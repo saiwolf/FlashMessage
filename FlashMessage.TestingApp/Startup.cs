@@ -10,6 +10,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.FileProviders;
+using Serilog;
+using System.Web.Http;
+using Microsoft.OpenApi.Models;
 
 namespace SWMNU.Net.TestingApp
 {
@@ -52,6 +55,10 @@ namespace SWMNU.Net.TestingApp
                 });
             }
 #endif
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "test", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +67,11 @@ namespace SWMNU.Net.TestingApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "test");
+                });
             }
             else
             {
@@ -71,6 +83,8 @@ namespace SWMNU.Net.TestingApp
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseSerilogRequestLogging();
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -79,8 +93,9 @@ namespace SWMNU.Net.TestingApp
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller}/{action}/{id?}",
-                    defaults: new { controller = "ExampleMVC", action = "Index" });
+                    pattern: "{controller}/{action}/{id}",
+                    defaults: new { id = RouteParameter.Optional }
+                );
                 endpoints.MapRazorPages();               
             });
         }

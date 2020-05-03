@@ -9,12 +9,81 @@
             Extension Methods class for extending built-in methods.
             </summary>
         </member>
+        <member name="M:SWMNU.Net.FlashMessage.ExtensionMethods.GetModelStateErrors(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            <para>Gets all errors from current ModelState</para>
+            <para>Extends off <c>ModelStateDictionary</c></para>
+            <para>Adapted from: https://medium.com/yasser-shaikh/how-to-read-all-errors-from-modelstate-in-asp-net-mvc-7ad54f22386b</para>
+            </summary>
+            <param name="modelState">ModelState to extract errors from.</param>
+            <returns><see cref="T:System.Collections.Generic.List`1"/> of errors, or a 0 count List if no errors present.</returns>
+        </member>
+        <member name="M:SWMNU.Net.FlashMessage.ExtensionMethods.SetMessage(Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionary,SWMNU.Net.FlashMessage.AlertMessage,System.String)">
+            <summary>
+            Sets Alert Message params in TempData.
+            </summary>
+            <param name="tempData">Current TempData object for Controller or Page.</param>
+            <param name="alertMessage">Flash Message to set in <paramref name="tempData"/></param>
+            <param name="tempKeyName"></param>
+        </member>
         <member name="M:SWMNU.Net.FlashMessage.ExtensionMethods.SetFlashMessage(Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionary,SWMNU.Net.FlashMessage.AlertMessage)">
             <summary>
             Sets Flash Message params in TempData.
             </summary>
             <param name="tempData">Current TempData object for Controller or Page.</param>
             <param name="alertMessage">Flash Message to set in <paramref name="tempData"/></param>
+        </member>
+        <member name="M:SWMNU.Net.FlashMessage.ExtensionMethods.SetFormMessage(Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionary,SWMNU.Net.FlashMessage.FormAlert)">
+            <summary>
+            Sets Form Message params in TempData.
+            </summary>
+            <param name="tempData">Current TempData object for Controller or Page.</param>
+            <param name="formAlert">Flash Message to set in <paramref name="tempData"/></param>        
+        </member>
+        <member name="T:SWMNU.Net.FlashMessage.MessageHelpers">
+            <summary>
+            Utility class for various Message display helper functions.
+            </summary>
+        </member>
+        <member name="M:SWMNU.Net.FlashMessage.MessageHelpers.BuildFormErrorString(System.Collections.Generic.List{System.String})">
+            <summary>
+            <para>Builds an HTML errors list from a c# List of ModelState errors.</para>
+            </summary>
+            <param name="modelStateErrors">A string-type List of errors from the ModelState</param>
+            <returns>String of HTML for displaying errors or an Empty string if something went wrong.</returns>
+        </member>
+        <member name="T:SWMNU.Net.FlashMessage.AlertMessage">
+            <summary>
+            Base Message Class.
+            </summary>
+        </member>
+        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Text">
+            <summary>
+            The meat of the message.
+            </summary>
+        </member>
+        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Title">
+            <summary>
+            An optional title. Will get a `&lt;h4&gt;` tag with the class `alert-heading`.
+            </summary>
+        </member>
+        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Type">
+            <summary>
+            The type of Alert to display. Defined in <see cref="!:AlertTypes"/>.
+            </summary>
+        </member>
+        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Dismissible">
+            <summary>
+            <para>
+            Boolean determining if the generated alert should be dismissible.
+            </para>
+            <para>
+            True: An X appears in the upper right of the alert.
+            </para>
+            <para>
+            False: No X appears.
+            </para>
+            </summary>
         </member>
         <member name="T:SWMNU.Net.FlashMessage.AlertType">
             <summary>
@@ -61,37 +130,14 @@
             Creates an alert with the Bootstrap 'Dark' theme color.
             </summary>
         </member>
-        <member name="T:SWMNU.Net.FlashMessage.AlertMessage">
+        <member name="T:SWMNU.Net.FlashMessage.FormAlert">
             <summary>
-            POCO Class for defining an flash message as a Bootstrap alert.
+            POCO Class for generating alerts for forms.
             </summary>
         </member>
-        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Text">
+        <member name="P:SWMNU.Net.FlashMessage.FormAlert.Errors">
             <summary>
-            The meat of the message.
-            </summary>
-        </member>
-        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Title">
-            <summary>
-            An optional title. Will get a `&lt;h4&gt;` tag with the class `alert-heading`.
-            </summary>
-        </member>
-        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Type">
-            <summary>
-            The type of Alert to display. Defined in <see cref="T:SWMNU.Net.FlashMessage.AlertType"/>.
-            </summary>
-        </member>
-        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Dismissible">
-            <summary>
-            <para>
-            Boolean determining if the generated alert should be dismissible.
-            </para>
-            <para>
-            True: An X appears in the upper right of the alert.
-            </para>
-            <para>
-            False: No X appears.
-            </para>
+            string of Errors.
             </summary>
         </member>
     </members>

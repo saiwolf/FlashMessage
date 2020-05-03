@@ -7,6 +7,11 @@ It depends on and utilizes [Twitter Bootstrap 4](https://getbootstrap.com/docs/4
 
 Check out the [Wiki](https://github.com/saiwolf/FlashMessage/wiki/Getting-Started) to get started!
 
+## Download
+
+You can grab this package from [NuGet](https://www.nuget.org/packages/SWMNU.Net.FlashMessage/)
+or by going to the [Releases](https://github.com/saiwolf/FlashMessage/releases) of this repo.
+
 ## What's a Flash Message?
 A Flash Message can be thought of as a one time notification.
 

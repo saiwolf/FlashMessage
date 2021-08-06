@@ -9,15 +9,15 @@
     <Authors>Robert Cato &lt;robertcato015@gmail.com&gt;</Authors>
     <Description>
       A Razor Class Library that provides a means to display Flash Messages in an ASP.NET Core 3.1 web application. (Razor Pages and MVC are supported.)
-      It depends on and utilizes Twitter Bootstrap 4 for the alert CSS and HTML.
-    </Description>
+      It depends on and utilizes Twitter Bootstrap for the alert CSS and HTML.
+</Description>
     <Copyright>2020 Robert Cato</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/saiwolf/FlashMessage</PackageProjectUrl>
     <RepositoryType>github</RepositoryType>
     <RepositoryUrl>https://github.com/saiwolf/FlashMessage</RepositoryUrl>
     <PackageVersion>1.0.2</PackageVersion>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageTags>flash message alert bootstrap asp.net core webapp</PackageTags>
   </PropertyGroup>
 

@@ -14,7 +14,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "SWMNU.NET.BS4.TestingApp": {
+    "SWMNU.NET.BS4.FlashMessage.TestingApp": {
       "commandName": "Project",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

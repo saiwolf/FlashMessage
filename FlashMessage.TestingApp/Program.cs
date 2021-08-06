@@ -3,7 +3,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 
-namespace SWMNU.NET.BS4.TestingApp
+namespace SWMNU.NET.BS4.FlashMessage.TestingApp
 {
     public class Program
     {

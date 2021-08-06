@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SWMNU.Net.FlashMessage;
-using SWMNU.NET.BS4.TestingApp.Models;
+using SWMNU.NET.BS4.FlashMessage.TestingApp.Models;
 
-namespace SWMNU.NET.BS4.TestingApp.Pages.ExampleRazor
+namespace SWMNU.NET.BS4.FlashMessage.TestingApp.Pages.ExampleRazor
 {
     public class FormMessageModel : PageModel
     {

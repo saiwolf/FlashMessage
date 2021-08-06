@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SWMNU.NET.BS4.TestingApp.Models
+namespace SWMNU.NET.BS4.FlashMessage.TestingApp.Models
 {
     public class FormMessageViewModel
     {

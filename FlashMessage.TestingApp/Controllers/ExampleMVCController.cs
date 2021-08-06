@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SWMNU.Net.FlashMessage;
-using SWMNU.NET.BS4.TestingApp.Models;
+using SWMNU.NET.BS4.FlashMessage.TestingApp.Models;
 
-namespace SWMNU.NET.BS4.TestingApp.Controllers
+namespace SWMNU.NET.BS4.FlashMessage.TestingApp.Controllers
 {
     [Route("ExampleMVC")]
     public class ExampleMVCController : Controller

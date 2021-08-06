@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SWMNU.Net.FlashMessage;
 
-namespace SWMNU.NET.BS4.TestingApp.Pages.ExampleRazor
+namespace SWMNU.NET.BS4.FlashMessage.TestingApp.Pages.ExampleRazor
 {
     public class FlashMessageModel : PageModel
     {

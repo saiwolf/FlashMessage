@@ -8,7 +8,7 @@ using Microsoft.OpenApi.Models;
 using Serilog;
 using System.IO;
 
-namespace SWMNU.NET.BS4.TestingApp
+namespace SWMNU.NET.BS4.FlashMessage.TestingApp
 {
     public class Startup
     {

@@ -1,10 +1,11 @@
-# (Outdated README. Will updated soon. Project source now can use either BS4 or BS5.)
-# Flash Messages for ASP.NET Core 3.1
+# Flash Messages for ASP.NET 5 and Core 3.1
 
 ## Description
-This is a Razor Class Library I wrote that provides a means to display Flash Messages in an ASP.NET Core 3.1 web application. (Razor Pages and MVC are supported.)
+This is a Razor Class Library that provides a means to display Flash Messages in an ASP.NET 5 or Core 3.1 web application. (Razor Pages and MVC are supported.)
 
-It depends on and utilizes [Twitter Bootstrap 4](https://getbootstrap.com/docs/4.4/getting-started/introduction/) for the alert CSS and HTML.
+It depends on and utilizes Twitter Bootstrap for the alert CSS and HTML.
+
+Currently, [Bootstrap 4.6](https://getbootstrap.com/docs/4.6/getting-started/introduction/) and [Bootstrap 5](https://getbootstrap.com/docs/5.1/getting-started/introduction/) are supported.
 
 Check out the [Wiki](https://github.com/saiwolf/FlashMessage/wiki/Getting-Started) to get started!
 
@@ -30,22 +31,24 @@ once. A refresh or reload will cause the message to disappear.
 
 ## Requirements
 
-1. An ASP.NET Core 3.1 Web App. Razor Pages and/or MVC supported.
-2. Bootstrap 4.
+1. An ASP.NET 5 or Core 3.1 Web App. Razor Pages and/or MVC supported.
+2. Bootstrap 4.6 or Bootstrap 5.1.
 
-## Example App
+## Example Apps
 
-The `FlashMessage.TestingApp` folder contains an ASP.NET Core 3.1 Web App that shows 
-off the Flash Message and Form Alert features. It contains both Razor Pages and MVC Examples.
+The `BS4.FlashMessage.TestingApp` and `BS5.FlashMessage.TestingApp` folders contain ASP.NET 5 Web Apps that show 
+off the Flash Message and Form Alert features. They contain both Razor Pages and MVC Examples.
 
-It utilizes [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) (located at [https://localhost:5001/swagger/](https://localhost:5001/swagger/))
+The `BS4` app uses Bootstrap 4.6.x and the `BS5` app uses Bootstrap 5.1.x
+
+The example apps utilize [Swashbuckle.AspNetCore](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) (located at [https://localhost:5001/swagger/](https://localhost:5001/swagger/))
 to show the MVC endpoints currently mapped.
 
-It also utilizes [Serilog.AspNetCore](https://github.com/serilog/serilog-aspnetcore) for better logging all around.
+They also utilize [Serilog.AspNetCore](https://github.com/serilog/serilog-aspnetcore) for better logging all around.
 
-### Running the Example App
+### Running the Example Apps
 
-1. Change directory to `FlashMessage.TestingApp`.
+1. Change directory to either one of the example apps.
 2. Execute `dotnet run`
 
 ## LICENSE

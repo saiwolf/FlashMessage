@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWMNU.NET.BS5.FlashMessage.TestingApp", "FlashMessage.BS5.TestingApp\SWMNU.NET.BS5.FlashMessage.TestingApp.csproj", "{43C5B379-7DD5-467F-994E-767BF7C1109A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{DF139AE6-9376-435C-9E98-1BCBFDA2B64C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF139AE6-9376-435C-9E98-1BCBFDA2B64C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF139AE6-9376-435C-9E98-1BCBFDA2B64C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43C5B379-7DD5-467F-994E-767BF7C1109A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43C5B379-7DD5-467F-994E-767BF7C1109A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43C5B379-7DD5-467F-994E-767BF7C1109A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43C5B379-7DD5-467F-994E-767BF7C1109A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

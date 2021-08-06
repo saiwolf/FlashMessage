@@ -1,3 +1,4 @@
+# (Outdated README. Will updated soon. Project source now can use either BS4 or BS5.)
 # Flash Messages for ASP.NET Core 3.1
 
 ## Description

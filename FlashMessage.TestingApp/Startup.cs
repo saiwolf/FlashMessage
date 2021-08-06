@@ -1,20 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.IO;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.FileProviders;
-using Serilog;
-using System.Web.Http;
+using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using Serilog;
+using System.IO;
 
-namespace SWMNU.Net.TestingApp
+namespace SWMNU.NET.BS4.TestingApp
 {
     public class Startup
     {
@@ -93,8 +87,7 @@ namespace SWMNU.Net.TestingApp
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller}/{action}/{id}",
-                    defaults: new { id = RouteParameter.Optional }
+                    pattern: "{controller}/{action}/{id}"
                 );
                 endpoints.MapRazorPages();               
             });

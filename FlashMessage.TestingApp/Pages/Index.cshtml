@@ -4,7 +4,15 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <a asp-controller="ExampleMVC" asp-action="Index">MVC Example</a><br />
-    <a asp-page="/ExampleRazor/Index">Razor Pages Example</a>
+<div class="jumbotron container">
+    <h1 class="display-4">Welcome to the Flash Message Testing App!</h1>
+    <p class="lead text-center">
+        This app lets you test out the <a href="https://github.com/saiwolf/FlashMessage" target="_blank" rel="noopener noreferrer">SWMNU.NET.FlashMessage</a> code!<br />
+        It uses <a href="https://getbootstrap.com/docs/4.6/getting-started/introduction/" target="_blank" rel="noopener noreferrer">Bootstrap 4.x</a> as the framework.
+    </p>
+    <hr class="my-4">
+    <div class="col-sm-3 mx-auto text-center">
+        <a class="btn btn-primary mb-2" asp-controller="ExampleMVC" asp-action="Index">MVC Example</a>
+        <a class="btn btn-primary" asp-page="/ExampleRazor/Index">Razor Pages Example</a>
+    </div>
 </div>

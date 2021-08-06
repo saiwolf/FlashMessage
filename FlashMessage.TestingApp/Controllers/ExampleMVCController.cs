@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SWMNU.Net.FlashMessage;
-using SWMNU.Net.TestingApp.Models;
+using SWMNU.NET.BS4.TestingApp.Models;
 
-namespace SWMNU.Net.TestingApp.Controllers
+namespace SWMNU.NET.BS4.TestingApp.Controllers
 {
     [Route("ExampleMVC")]
     public class ExampleMVCController : Controller
@@ -48,6 +48,9 @@ namespace SWMNU.Net.TestingApp.Controllers
                 // Return View with previous model values, so form stays populated.
                 return View(flashMessage);
             }
+
+            // Set this to `true` to use Bootstrap 4.x
+            flashMessage.UseBootstrap4 = true;
 
             // If all is well, then set Flash Message params in TempData
             TempData.SetFlashMessage(flashMessage);
@@ -127,6 +130,7 @@ namespace SWMNU.Net.TestingApp.Controllers
                     Text = "Houston, we have a problem!",
                     Type = AlertType.Danger,
                     Dismissible = false,
+                    UseBootstrap4 = true, // Use Bootstrap 4.x
                     Errors = errors
                 };
             }
@@ -139,6 +143,7 @@ namespace SWMNU.Net.TestingApp.Controllers
                     Text = "Everything is in order!",
                     Type = AlertType.Success,
                     Dismissible = true,
+                    UseBootstrap4 = true, // Use Bootstrap 4.x
                     Errors = string.Empty
                 };
             }

@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SWMNU.Net.FlashMessage;
-using SWMNU.Net.TestingApp.Models;
+using SWMNU.NET.BS4.TestingApp.Models;
 
-namespace SWMNU.Net.TestingApp.Pages.ExampleRazor
+namespace SWMNU.NET.BS4.TestingApp.Pages.ExampleRazor
 {
     public class FormMessageModel : PageModel
     {
@@ -73,6 +73,7 @@ namespace SWMNU.Net.TestingApp.Pages.ExampleRazor
                     Text = "Houston, we have a problem!",
                     Type = AlertType.Danger,
                     Dismissible = false,
+                    UseBootstrap4 = true, // Use Bootstrap 4.x
                     Errors = errors
                 };                
             }
@@ -85,6 +86,7 @@ namespace SWMNU.Net.TestingApp.Pages.ExampleRazor
                     Text = "Everything is in order!",
                     Type = AlertType.Success,
                     Dismissible = true,
+                    UseBootstrap4 = true, // Use Bootstrap 4.x
                     Errors = string.Empty
                 };
             }

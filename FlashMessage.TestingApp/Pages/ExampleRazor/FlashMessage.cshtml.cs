@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using SWMNU.Net.FlashMessage;
 
-namespace SWMNU.Net.TestingApp.Pages.ExampleRazor
+namespace SWMNU.NET.BS4.TestingApp.Pages.ExampleRazor
 {
     public class FlashMessageModel : PageModel
     {
@@ -35,6 +35,8 @@ namespace SWMNU.Net.TestingApp.Pages.ExampleRazor
                 return Page();
             }
 
+            // Set to `true` to use Bootstrap 4.x
+            FlashMessage.UseBootstrap4 = true;
             // If all is well, then set Flash Message params in TempData
             TempData.SetFlashMessage(FlashMessage);
             // Return Page to show set Flash Message.

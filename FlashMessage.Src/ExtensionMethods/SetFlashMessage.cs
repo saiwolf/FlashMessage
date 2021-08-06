@@ -22,6 +22,7 @@ namespace SWMNU.Net.FlashMessage
             tempData[$"{tempKeyName}.Title"] = string.IsNullOrEmpty(alertMessage.Title) ? string.Empty : alertMessage.Title;
             tempData[$"{tempKeyName}.Type"] = alertMessage.Type.ToString().ToLower();
             tempData[$"{tempKeyName}.Dismissible"] = alertMessage.Dismissible ? "true" : "false";
+            tempData[$"{tempKeyName}.UseBootstrap4"] = alertMessage.UseBootstrap4 ? "true" : "false";
         }
 
         /// <summary>

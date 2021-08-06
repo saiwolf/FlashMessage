@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace SWMNU.Net.TestingApp.Pages
+namespace SWMNU.NET.BS4.TestingApp.Pages
 {
     public class IndexModel : PageModel
     {

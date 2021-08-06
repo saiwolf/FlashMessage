@@ -1,10 +1,17 @@
 ﻿@page
-@model SWMNU.NET.TestingApp.Pages.ExampleRazor.IndexModel
+@model SWMNU.NET.BS4.TestingApp.Pages.ExampleRazor.IndexModel
 @{
     ViewData["Title"] = "Razor Page Examples";
 }
 
-<h2 class="text-center">@ViewData["Title"]</h2>
-<hr />
-<a asp-page="FlashMessage">Flash Message Example</a><br />
-<a asp-page="FormMessage">Form Error Message Example</a>
+<div class="jumbotron container">
+    <h1 class="display-4 text-center">Welcome to the Razor Pages Testing Area!</h1>
+    <p class="lead text-center">
+        You can find the code for these examples under <code>&lt;repo&gt;/SWMNU.NET.FlashMessage.BS4.TestingApp/Pages/ExampleRazor/</code>.
+    </p>
+    <hr class="my-4">
+    <div class="col-sm-3 mx-auto text-center">
+        <a class="btn btn-primary mb-2" asp-page="FlashMessage">Flash Message Example</a><br />
+        <a class="btn btn-primary" asp-page="FormMessage">Form Error Message Example</a>
+    </div>
+</div>

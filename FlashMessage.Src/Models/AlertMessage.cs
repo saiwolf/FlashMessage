@@ -29,5 +29,11 @@
         /// </para>
         /// </summary>
         public bool Dismissible { get; set; } = false;
+        /// <summary>
+        /// <para>Added to maintain backwards compatibility with Bootstrap 4.x</para>
+        /// <para>Boolean controlling the use of Bootstrap classes between versions 4.x and 5.x</para>
+        /// <para>True uses the old 4.x classes, False uses the new 5.x classes.</para>
+        /// </summary>
+        public bool UseBootstrap4 { get; set; } = false;
     }
 }

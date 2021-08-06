@@ -85,6 +85,13 @@
             </para>
             </summary>
         </member>
+        <member name="P:SWMNU.Net.FlashMessage.AlertMessage.UseBootstrap4">
+            <summary>
+            <para>Added to maintain backwards compatibility with Bootstrap 4.x</para>
+            <para>Boolean controlling the use of Bootstrap classes between versions 4.x and 5.x</para>
+            <para>True uses the old 4.x classes, False uses the new 5.x classes.</para>
+            </summary>
+        </member>
         <member name="T:SWMNU.Net.FlashMessage.AlertType">
             <summary>
             Enumeration of valid Bootstrap alert theme colors.

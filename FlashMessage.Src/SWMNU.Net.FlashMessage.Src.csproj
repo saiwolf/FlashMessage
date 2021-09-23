@@ -16,13 +16,15 @@
     <PackageProjectUrl>https://github.com/saiwolf/FlashMessage</PackageProjectUrl>
     <RepositoryType>github</RepositoryType>
     <RepositoryUrl>https://github.com/saiwolf/FlashMessage</RepositoryUrl>
-    <PackageVersion>1.0.2</PackageVersion>
-    <Version>1.0.3</Version>
+    <PackageVersion>1.0.4</PackageVersion>
+    <Version>1.0.4</Version>
     <PackageTags>flash message alert bootstrap asp.net core webapp</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup>
     <DocumentationFile>SWMNU.Net.FlashMessage.xml</DocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
 
   <ItemGroup>

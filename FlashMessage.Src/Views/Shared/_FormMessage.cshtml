@@ -1,0 +1,44 @@
+﻿@{
+    string text = string.IsNullOrEmpty((string)TempData["FormMessage.Text"]) ? string.Empty : (string)TempData["FormMessage.Text"];
+    string title = string.IsNullOrEmpty((string)TempData["FormMessage.Title"]) ? string.Empty : (string)TempData["FormMessage.Title"];
+    string type = (string)TempData["FormMessage.Type"];
+    string errors = string.IsNullOrEmpty((string)TempData["FormMessage.Errors"]) ? string.Empty : (string)TempData["FormMessage.Errors"];
+    bool dismissible = Convert.ToBoolean((string)TempData["FormMessage.Dismissible"]);
+    bool useBootstrap4 = Convert.ToBoolean((string)TempData["FormMessage.UseBootstrap4"]);
+
+}
+
+@if (!string.IsNullOrEmpty(text))
+{
+<div class="alert alert-@type @(dismissible ? "alert-dismissible" : null) fade show" role="alert">
+    @if (!string.IsNullOrEmpty(title))
+    {
+        <h4 class="alert-heading text-center">@title</h4>
+    }
+
+    <p class="text-center">@text</p>
+
+    @if (!string.IsNullOrEmpty(errors))
+    {
+        <div class="d-flex justify-content-center">
+            @Html.Raw(errors)
+        </div>
+    }
+
+    @if (dismissible)
+    {
+        if (useBootstrap4)
+        {
+            @* Bootstrap 4.x dismissable button *@
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        }
+        else
+        {
+            @* Bootstrap 5.x dismissable button *@
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        }
+    }
+</div>
+}

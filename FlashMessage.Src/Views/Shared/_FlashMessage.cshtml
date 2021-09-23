@@ -1,0 +1,35 @@
+﻿@{
+    string text = string.IsNullOrEmpty((string)TempData["FlashMessage.Text"]) ? string.Empty : (string)TempData["FlashMessage.Text"];
+    string title = string.IsNullOrEmpty((string)TempData["FlashMessage.Title"]) ? string.Empty : (string)TempData["FlashMessage.Title"];
+    string type = (string)TempData["FlashMessage.Type"];
+    bool dismissible = Convert.ToBoolean((string)TempData["FlashMessage.Dismissible"]);
+    bool useBootstrap4 = Convert.ToBoolean((string)TempData["FlashMessage.UseBootstrap4"]);
+}
+
+@if (!string.IsNullOrEmpty(text))
+{
+<div class="alert alert-@type @(dismissible ? "alert-dismissible" : null) fade show" role="alert">
+    @if (!string.IsNullOrEmpty(title))
+    {
+        <h4 class="alert-heading text-center">@title</h4>
+    }
+
+    <p class="text-center">@text</p>
+
+    @if (dismissible)
+    {
+        if (useBootstrap4)
+        {
+            @* Bootstrap 4.x dismissable button *@
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        }
+        else
+        {
+            @* Bootstrap 5.x dismissable button *@
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        }
+    }
+</div>
+}

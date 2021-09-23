@@ -29,7 +29,7 @@ namespace SWMNU.NET.BS4.FlashMessage.TestingApp
 #if DEBUG
             if (Environment.IsDevelopment())
             {
-                string[] dirs = { "FlashMessage.Src", "FlashMessage.TestingApp" };
+                string[] dirs = { "FlashMessage.Src", "BS4.FlashMessage.TestingApp" };
                 controllerBuilder.AddRazorRuntimeCompilation(options =>
                 {
                     foreach (var dir in dirs)

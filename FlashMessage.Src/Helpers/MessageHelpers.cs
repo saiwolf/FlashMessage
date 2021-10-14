@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
 namespace SWMNU.Net.FlashMessage
@@ -16,10 +15,10 @@ namespace SWMNU.Net.FlashMessage
         /// <returns>String of HTML for displaying errors or an Empty string if something went wrong.</returns>
         public static string BuildFormErrorString(List<string> modelStateErrors)
         {
-            if (modelStateErrors.Count() == 0)
+            if (modelStateErrors.Count == 0)
                 return string.Empty;
 
-            var sbString = new StringBuilder();
+            StringBuilder sbString = new();
 
             sbString.Append("<ul>");
 
@@ -30,16 +29,12 @@ namespace SWMNU.Net.FlashMessage
 
             sbString.Append("</ul>");
 
-            var htmlString = sbString.ToString();
+            string htmlString = sbString.ToString();
 
             if (htmlString.Contains("<li>"))
-            {
                 return htmlString;
-            }
             else
-            {
                 return string.Empty;
-            }
         }
     }
 }

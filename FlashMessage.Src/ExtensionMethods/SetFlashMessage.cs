@@ -67,5 +67,72 @@ namespace SWMNU.Net.FlashMessage
 
             tempData["FormMessage.Errors"] = string.IsNullOrEmpty(formAlert.Errors) ? string.Empty : formAlert.Errors;
         }
-    }      
+
+        #region Convience Methods
+        /// <summary>
+        /// Renders a green 'success' message
+        /// </summary>
+        /// <param name="tempData">Current TempData object for Controller or Page.</param>
+        /// <param name="text">Alert text</param>
+        /// <param name="title">Optional alert title</param>
+        /// <param name="dismissible">Controls if alert is dismissible</param>
+        /// <param name="useBootstrap4">Controsl legacy Boostrap 4.x use</param>
+        public static void SetSuccessMessage(
+            this ITempDataDictionary tempData,
+            string text,
+            string? title,
+            bool dismissible = true,
+            bool useBootstrap4 = false) 
+        => SetFlashMessage(tempData, text, title, AlertType.Success, dismissible, useBootstrap4);
+
+
+        /// <summary>
+        /// Renders a red 'Danger' or 'Error' message
+        /// </summary>
+        /// <param name="tempData">Current TempData object for Controller or Page.</param>
+        /// <param name="text">Alert text</param>
+        /// <param name="title">Optional alert title</param>
+        /// <param name="dismissible">Controls if alert is dismissible</param>
+        /// <param name="useBootstrap4">Controsl legacy Boostrap 4.x use</param>
+        public static void SetErrorMessage(
+            this ITempDataDictionary tempData,
+            string text,
+            string? title,
+            bool dismissible = false,
+            bool useBootstrap4 = false)
+        => SetFlashMessage(tempData, text, title, AlertType.Danger, dismissible, useBootstrap4);
+
+        /// <summary>
+        /// Renders an yellow/orange 'Warning' message
+        /// </summary>
+        /// <param name="tempData">Current TempData object for Controller or Page.</param>
+        /// <param name="text">Alert text</param>
+        /// <param name="title">Optional alert title</param>
+        /// <param name="dismissible">Controls if alert is dismissible</param>
+        /// <param name="useBootstrap4">Controsl legacy Boostrap 4.x use</param>
+        public static void SetWarningMessage(
+            this ITempDataDictionary tempData,
+            string text,
+            string? title,
+            bool dismissible = true,
+            bool useBootstrap4 = false)
+        => SetFlashMessage(tempData, text, title, AlertType.Warning, dismissible, useBootstrap4);
+
+        /// <summary>
+        /// Renders a light-blue Informational message
+        /// </summary>
+        /// <param name="tempData">Current TempData object for Controller or Page.</param>
+        /// <param name="text">Alert text</param>
+        /// <param name="title">Optional alert title</param>
+        /// <param name="dismissible">Controls if alert is dismissible</param>
+        /// <param name="useBootstrap4">Controsl legacy Boostrap 4.x use</param>
+        public static void SetInfoMessage(
+            this ITempDataDictionary tempData,
+            string text,
+            string? title,
+            bool dismissible = true,
+            bool useBootstrap4 = false)
+        => SetFlashMessage(tempData, text, title, AlertType.Info, dismissible, useBootstrap4);
+        #endregion
+    }
 }

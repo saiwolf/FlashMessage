@@ -1,40 +1,37 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace SWMNU.Net.FlashMessage
+namespace SWMNU.Net.FlashMessage;
+
+/// <summary>
+/// Utility class for various Message display helper functions.
+/// </summary>
+public static class MessageHelpers
 {
     /// <summary>
-    /// Utility class for various Message display helper functions.
+    /// <para>Builds an HTML errors list from a c# List of ModelState errors.</para>
     /// </summary>
-    public static class MessageHelpers
+    /// <param name="modelStateErrors">A string-type List of errors from the ModelState</param>
+    /// <returns>String of HTML for displaying errors or an Empty string if something went wrong.</returns>
+    public static string BuildFormErrorString(List<string> modelStateErrors)
     {
-        /// <summary>
-        /// <para>Builds an HTML errors list from a c# List of ModelState errors.</para>
-        /// </summary>
-        /// <param name="modelStateErrors">A string-type List of errors from the ModelState</param>
-        /// <returns>String of HTML for displaying errors or an Empty string if something went wrong.</returns>
-        public static string BuildFormErrorString(List<string> modelStateErrors)
-        {
-            if (modelStateErrors.Count == 0)
-                return string.Empty;
+        if (modelStateErrors is null || modelStateErrors.Count == 0)
+            return string.Empty;
 
-            StringBuilder sbString = new();
+        StringBuilder sbString = new();
 
-            sbString.Append("<ul>");
+        sbString.Append("<ul>");
 
-            foreach (var error in modelStateErrors)
-            {
-                sbString.Append($"<li>{error}</li>");
-            }
+        foreach (var error in modelStateErrors)
+            sbString.Append($"<li>{error}</li>");        
 
-            sbString.Append("</ul>");
+        sbString.Append("</ul>");
 
-            string htmlString = sbString.ToString();
+        string htmlString = sbString.ToString();
 
-            if (htmlString.Contains("<li>"))
-                return htmlString;
-            else
-                return string.Empty;
-        }
+        if (htmlString.Contains("<li>"))
+            return htmlString;
+        else
+            return string.Empty;
     }
 }

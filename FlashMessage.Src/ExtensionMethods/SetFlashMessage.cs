@@ -36,6 +36,27 @@ namespace SWMNU.Net.FlashMessage
         }
 
         /// <summary>
+        /// Sets Flash Message params in TempData.
+        /// </summary>
+        /// <param name="tempData">Current TempData object for Controller or Page.</param>
+        /// <param name="text">Alert text</param>
+        /// <param name="title">Optional alert title</param>
+        /// <param name="alertType">Type/Color of Alert</param>
+        /// <param name="dismissible">Controls if alert is dismissible</param>
+        /// <param name="useBootstrap4">Controsl legacy Boostrap 4.x use</param>
+        public static void SetFlashMessage(
+            this ITempDataDictionary tempData,
+            string text,
+            string? title,
+            AlertType alertType,
+            bool dismissible = false,
+            bool useBootstrap4 = false)
+        {
+            AlertMessage alertMessage = new(text, title, alertType, dismissible, useBootstrap4);
+            SetMessage(tempData, alertMessage, "FlashMessage");
+        }
+
+        /// <summary>
         /// Sets Form Message params in TempData.
         /// </summary>
         /// <param name="tempData">Current TempData object for Controller or Page.</param>

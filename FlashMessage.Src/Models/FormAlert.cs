@@ -1,14 +1,12 @@
-﻿using Microsoft.AspNetCore.Html;
-namespace SWMNU.Net.FlashMessage
+﻿namespace SWMNU.Net.FlashMessage;
+
+/// <summary>
+/// POCO Class for generating alerts for forms.
+/// </summary>
+public class FormAlert : AlertMessage
 {
     /// <summary>
-    /// POCO Class for generating alerts for forms.
+    /// String of Errors.
     /// </summary>
-    public class FormAlert : AlertMessage
-    {
-        /// <summary>
-        /// String of Errors.
-        /// </summary>
-        public string Errors { get; set; }
-    }
+    public string? Errors { get; set; }
 }

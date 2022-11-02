@@ -1,10 +1,10 @@
 ﻿@{
-    string text = string.IsNullOrEmpty((string)TempData["FormMessage.Text"]) ? string.Empty : (string)TempData["FormMessage.Text"];
-    string title = string.IsNullOrEmpty((string)TempData["FormMessage.Title"]) ? string.Empty : (string)TempData["FormMessage.Title"];
-    string type = (string)TempData["FormMessage.Type"];
-    string errors = string.IsNullOrEmpty((string)TempData["FormMessage.Errors"]) ? string.Empty : (string)TempData["FormMessage.Errors"];
-    bool dismissible = Convert.ToBoolean((string)TempData["FormMessage.Dismissible"]);
-    bool useBootstrap4 = Convert.ToBoolean((string)TempData["FormMessage.UseBootstrap4"]);
+    string? text = string.IsNullOrEmpty((string?)TempData["FormMessage.Text"]) ? string.Empty : (string?)TempData["FormMessage.Text"];
+    string? title = string.IsNullOrEmpty((string?)TempData["FormMessage.Title"]) ? string.Empty : (string?)TempData["FormMessage.Title"];
+    string? type = (string?)TempData["FormMessage.Type"];
+    string? errors = string.IsNullOrEmpty((string?)TempData["FormMessage.Errors"]) ? string.Empty : (string?)TempData["FormMessage.Errors"];
+    bool dismissible = Convert.ToBoolean((string?)TempData["FormMessage.Dismissible"]);
+    bool useBootstrap4 = Convert.ToBoolean((string?)TempData["FormMessage.UseBootstrap4"]);
 
 }
 

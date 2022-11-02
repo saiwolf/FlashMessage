@@ -1,7 +1,7 @@
-# Flash Messages for ASP.NET 5 and Core 3.1
+# Flash Messages for ASP.NET Core
 
 ## Description
-This is a Razor Class Library that provides a means to display Flash Messages in an ASP.NET 5 or Core 3.1 web application. (Razor Pages and MVC are supported.)
+This is a Razor Class Library that provides a means to display Flash Messages in an ASP.NET web application. (Razor Pages and MVC are supported.)
 
 It depends on and utilizes Twitter Bootstrap for the alert CSS and HTML.
 
@@ -24,14 +24,14 @@ that an action has failed. They're meant to be seen once and never again.
 
 In a nutshell, this library exports functions and a few Razor View Partials that work in tandem
 to display a Flash Message or a Form Alert using [`TempData`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/app-state?view=aspnetcore-3.1#tempdata) and 
-Bootstrap 4 for the Alert styling.
+Bootstrap for the Alert styling.
 
 By using `TempData`, the flash message is only shown
 once. A refresh or reload will cause the message to disappear.
 
 ## Requirements
 
-1. An ASP.NET 5 or Core 3.1 Web App. Razor Pages and/or MVC supported.
+1. An ASP.NET Web App. Razor Pages and/or MVC supported.
 2. Bootstrap 4.6 or Bootstrap 5.1.
 
 ## Example Apps

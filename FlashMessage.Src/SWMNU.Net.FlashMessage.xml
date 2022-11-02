@@ -33,12 +33,63 @@
             <param name="tempData">Current TempData object for Controller or Page.</param>
             <param name="alertMessage">Flash Message to set in <paramref name="tempData"/></param>
         </member>
+        <member name="M:SWMNU.Net.FlashMessage.ExtensionMethods.SetFlashMessage(Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionary,System.String,System.String,SWMNU.Net.FlashMessage.AlertType,System.Boolean,System.Boolean)">
+            <summary>
+            Sets Flash Message params in TempData.
+            </summary>
+            <param name="tempData">Current TempData object for Controller or Page.</param>
+            <param name="text">Alert text</param>
+            <param name="title">Optional alert title</param>
+            <param name="alertType">Type/Color of Alert</param>
+            <param name="dismissible">Controls if alert is dismissible</param>
+            <param name="useBootstrap4">Controsl legacy Boostrap 4.x use</param>
+        </member>
         <member name="M:SWMNU.Net.FlashMessage.ExtensionMethods.SetFormMessage(Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionary,SWMNU.Net.FlashMessage.FormAlert)">
             <summary>
             Sets Form Message params in TempData.
             </summary>
             <param name="tempData">Current TempData object for Controller or Page.</param>
             <param name="formAlert">Flash Message to set in <paramref name="tempData"/></param>        
+        </member>
+        <member name="M:SWMNU.Net.FlashMessage.ExtensionMethods.SetSuccessMessage(Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionary,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Renders a green 'success' message
+            </summary>
+            <param name="tempData">Current TempData object for Controller or Page.</param>
+            <param name="text">Alert text</param>
+            <param name="title">Optional alert title</param>
+            <param name="dismissible">Controls if alert is dismissible</param>
+            <param name="useBootstrap4">Controsl legacy Boostrap 4.x use</param>
+        </member>
+        <member name="M:SWMNU.Net.FlashMessage.ExtensionMethods.SetErrorMessage(Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionary,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Renders a red 'Danger' or 'Error' message
+            </summary>
+            <param name="tempData">Current TempData object for Controller or Page.</param>
+            <param name="text">Alert text</param>
+            <param name="title">Optional alert title</param>
+            <param name="dismissible">Controls if alert is dismissible</param>
+            <param name="useBootstrap4">Controsl legacy Boostrap 4.x use</param>
+        </member>
+        <member name="M:SWMNU.Net.FlashMessage.ExtensionMethods.SetWarningMessage(Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionary,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Renders an yellow/orange 'Warning' message
+            </summary>
+            <param name="tempData">Current TempData object for Controller or Page.</param>
+            <param name="text">Alert text</param>
+            <param name="title">Optional alert title</param>
+            <param name="dismissible">Controls if alert is dismissible</param>
+            <param name="useBootstrap4">Controsl legacy Boostrap 4.x use</param>
+        </member>
+        <member name="M:SWMNU.Net.FlashMessage.ExtensionMethods.SetInfoMessage(Microsoft.AspNetCore.Mvc.ViewFeatures.ITempDataDictionary,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Renders a light-blue Informational message
+            </summary>
+            <param name="tempData">Current TempData object for Controller or Page.</param>
+            <param name="text">Alert text</param>
+            <param name="title">Optional alert title</param>
+            <param name="dismissible">Controls if alert is dismissible</param>
+            <param name="useBootstrap4">Controsl legacy Boostrap 4.x use</param>
         </member>
         <member name="T:SWMNU.Net.FlashMessage.MessageHelpers">
             <summary>
@@ -55,6 +106,21 @@
         <member name="T:SWMNU.Net.FlashMessage.AlertMessage">
             <summary>
             Base Message Class.
+            </summary>
+        </member>
+        <member name="M:SWMNU.Net.FlashMessage.AlertMessage.#ctor(System.String,System.String,SWMNU.Net.FlashMessage.AlertType,System.Boolean,System.Boolean)">
+            <summary>
+            AlertMessage constructor
+            </summary>
+            <param name="alertText">Text of alert</param>
+            <param name="alertTitle">(Optional) Title of alert</param>
+            <param name="alertType">Type/Color of Alert</param>
+            <param name="isDismissible">Controls if Alert is dismissible</param>
+            <param name="useBS4">Controls legacy BS 4.x behavior</param>
+        </member>
+        <member name="M:SWMNU.Net.FlashMessage.AlertMessage.#ctor">
+            <summary>
+            Parameter-less constructor.
             </summary>
         </member>
         <member name="P:SWMNU.Net.FlashMessage.AlertMessage.Text">

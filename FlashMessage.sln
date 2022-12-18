@@ -5,15 +5,13 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWMNU.Net.FlashMessage.Src", "FlashMessage.Src\SWMNU.Net.FlashMessage.Src.csproj", "{34209E55-467F-42C8-9C86-767A7F93B3B6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWMNU.NET.BS4.FlashMessage.TestingApp", "BS4.FlashMessage.TestingApp\SWMNU.NET.BS4.FlashMessage.TestingApp.csproj", "{DF139AE6-9376-435C-9E98-1BCBFDA2B64C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{12F0986D-53BE-4134-87CA-4EDA660629FE}"
 	ProjectSection(SolutionItems) = preProject
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWMNU.NET.BS5.FlashMessage.TestingApp", "BS5.FlashMessage.TestingApp\SWMNU.NET.BS5.FlashMessage.TestingApp.csproj", "{43C5B379-7DD5-467F-994E-767BF7C1109A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWMNU.NET.FlashMessage.TestingApp", "FlashMessage.TestingApp\SWMNU.NET.FlashMessage.TestingApp.csproj", "{43C5B379-7DD5-467F-994E-767BF7C1109A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,0 +1,55 @@
+﻿@page
+@using SWMNU.Net.FlashMessage
+@model SWMNU.NET.FlashMessage.TestingApp.ExampleRazor.Pages.FlashMessageModel
+@{
+    ViewData["Title"] = "Razor Example";
+}
+
+<div class="col-sm-12 col-md-6 offset-md-3 mx-auto">
+    <h2 class="text-center font-bold">@ViewData["Title"]</h2>
+    <hr />
+    <form method="post">
+        @Html.AntiForgeryToken()
+        @if(Model.ModelState.ErrorCount > 0)
+        {
+            <div class="alert alert-danger" role="alert">
+                <h4 class="alert-heading text-center">Uh oh!</h4>
+                    <div asp-validation-summary="All"></div>
+            </div>
+        }
+        <div class="mb-3">
+            <label asp-for="@Model.FlashMessage.Text"></label>
+            <input class="form-control" asp-for="@Model.FlashMessage.Text" placeholder="Flash Message Contents" />        
+        </div>
+        <div class="mb-3">
+            <label asp-for="@Model.FlashMessage.Title"></label>
+            <input class="form-control" asp-for="@Model.FlashMessage.Title" placeholder="(Optional) Flash Message Heading/Title" />        
+        </div>
+        <div class="mb-3">
+            <label asp-for="@Model.FlashMessage.Type"></label>
+            <select class="form-select" aria-label="Select Alert Type" asp-for="@Model.FlashMessage.Type" asp-items="Html.GetEnumSelectList<AlertType>()">
+            </select>
+        </div>
+        <div class="mb-3">
+            <div class="form-check form-switch">
+                <input class="form-check-input" asp-for="@Model.FlashMessage.Dismissible" />
+                <label asp-for="@Model.FlashMessage.Dismissible">Dismissible?</label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Generate Flash Message!</button>&nbsp;
+            <button type="button" class="btn btn-danger" id="reloadBtn">Reload Page</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#reloadBtn").on('click', function () {
+                window.location.href = window.location.href;
+            });
+        });
+    </script>
+}

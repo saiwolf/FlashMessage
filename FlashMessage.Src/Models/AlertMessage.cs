@@ -1,4 +1,6 @@
-﻿namespace SWMNU.Net.FlashMessage;
+﻿using System;
+
+namespace SWMNU.Net.FlashMessage;
 
 /// <summary>
 /// Base Message Class.
@@ -83,6 +85,7 @@ public class AlertMessage
     /// <para>Boolean controlling the use of Bootstrap classes between versions 4.x and 5.x</para>
     /// <para>True uses the old 4.x classes, False uses the new 5.x classes.</para>
     /// </summary>
+    [Obsolete]
     public bool UseBootstrap4
     {
         get => _useBootstrap4;

@@ -8,16 +8,16 @@
     <RootNamespace>SWMNU.Net.FlashMessage</RootNamespace>
     <Authors>Robert Cato &lt;robertcato015@gmail.com&gt;</Authors>
     <Description>
-      A Razor Class Library that provides a means to display Flash Messages in an ASP.NET Core 3.1 web application. (Razor Pages and MVC are supported.)
-      It depends on and utilizes Twitter Bootstrap for the alert CSS and HTML.
+      A Razor Class Library that provides a means to display Flash Messages in an ASP.NET web application. (Razor Pages and MVC are supported.)
+      It depends on and utilizes Twitter Bootstrap 5 for the alert CSS and HTML.
 </Description>
     <Copyright>2020 Robert Cato</Copyright>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl>https://github.com/saiwolf/FlashMessage</PackageProjectUrl>
     <RepositoryType>github</RepositoryType>
     <RepositoryUrl>https://github.com/saiwolf/FlashMessage</RepositoryUrl>
-    <PackageVersion>1.0.4</PackageVersion>
-    <Version>1.0.4</Version>
+    <PackageVersion>1.0.6</PackageVersion>
+    <Version>1.0.6</Version>
     <PackageTags>flash message alert bootstrap asp.net core webapp</PackageTags>
   </PropertyGroup>
 
